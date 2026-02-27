@@ -1,6 +1,9 @@
 import TotalDonations from "./TotalDonations";
-import TopDonators from "./TopDonator";
+import TopDonator from "./TopDonator";
 import DonationsToday from "./DonationsToday";
+import TopDonators from "./TopDonators";
+import DonationTrends from "./DonationTrends";
+
 
 const Dashboard = () => {
   return (
@@ -12,8 +15,15 @@ const Dashboard = () => {
     <DonationsToday />
   </div>
   <div className="col-span-1">
-    <TopDonators />
+    <TopDonator />
   </div>
+
+  <div className="top-donators col-span-1 md:col-span-3">
+   <TopDonators />
+  </div>
+  <div className="donation-trends recent-activities col-span-1 md:col-span-3">
+<DonationTrends />
+</div>
 </div>
   );
 };
